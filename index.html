@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/normolize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>ChatCraft</title>
+</head>
+<body>
+    <main class="app">
+        <div class="nav_bar burger">
+            <span class="icon-wrapper icon-burger">
+                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5 10.5C4.5 9.67157 5.17157 9 6 9H30C30.8284 9 31.5 9.67157 31.5 10.5V10.5C31.5 11.3284 30.8284 12 30 12H6C5.17157 12 4.5 11.3284 4.5 10.5V10.5ZM4.5 18C4.5 17.1716 5.17157 16.5 6 16.5H30C30.8284 16.5 31.5 17.1716 31.5 18V18C31.5 18.8284 30.8284 19.5 30 19.5H6C5.17157 19.5 4.5 18.8284 4.5 18V18ZM4.5 25.5C4.5 24.6716 5.17157 24 6 24H30C30.8284 24 31.5 24.6716 31.5 25.5V25.5C31.5 26.3284 30.8284 27 30 27H6C5.17157 27 4.5 26.3284 4.5 25.5V25.5Z" fill="white"/>
+                </svg>
+            </span>
+        </div>
+        <div class="nav_bar computer">
+            <div class="nav_bar--item profile_menu">
+                <div class="profile_avatar">
+                    <span class="img-wrapper img_profile">
+                        <img class="photo" src="./img/photo/1-1.png">
+                    </span>
+                    <span class="indicator online_indicator online_indicator--online"></span>
+                </div>
+                <span class="icon-wrapper icon-logout">
+                    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 10.001H12V24.001C12 24.5314 12.2107 25.0401 12.5858 25.4152C12.9609 25.7903 13.4696 26.001 14 26.001H22M23 21.001L26 18.001M26 18.001L23 15.001M26 18.001H16" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                        
+                </span>
+            </div>
+            <span class="nav_bar__separator"></span>
+            <div class="nav_bar--item colleagues_menu">
+                <div class="colleagues_menu__collegue profile_avatar">
+                    <span class="img-wrapper img_profile">
+                        <img src="./img/photo/2-1.png">
+                    </span>
+                    <span class="indicator online_indicator online_indicator--offline"></span>
+                </div>
+                <div class="colleagues_menu__collegue profile_avatar">
+                    <span class="img-wrapper img_profile">
+                        <img src="./img/photo/3-1.png">
+                    </span>
+                    <span class="indicator online_indicator online_indicator--online"></span>
+                </div>
+                <div class="colleagues_menu__collegue profile_avatar">
+                    <span class="img-wrapper img_profile">
+                        <img src="./img/photo/4.png">
+                    </span>
+                    <span class="indicator online_indicator online_indicator--offline"></span>
+                </div>
+                <div class="colleagues_menu__collegue profile_avatar">
+                    <span class="img-wrapper img_profile">
+                        <img src="./img/photo/5.png">
+                    </span>
+                    <span class="indicator online_indicator online_indicator--online"></span>
+                </div>
+                <span class="icon-wrapper icon-add-person">
+                    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_280_1259)">
+                    <path stroke="currentColor" d="M35.0525 17.9999C35.0525 8.58199 27.4178 0.947266 17.9999 0.947266C8.58199 0.947266 0.947266 8.58199 0.947266 17.9999C0.947266 27.4178 8.58199 35.0525 17.9999 35.0525C27.4178 35.0525 35.0525 27.4178 35.0525 17.9999Z" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 5"/>
+                    <path fill="currentColor" d="M25.5789 17.0527H23.6842C23.4158 17.0527 23.1909 16.9618 23.0096 16.7799C22.8284 16.598 22.7375 16.3732 22.7368 16.1054C22.7368 15.837 22.8277 15.6121 23.0096 15.4308C23.1915 15.2496 23.4163 15.1586 23.6842 15.158H25.5789V13.2632C25.5789 12.9949 25.6698 12.77 25.8517 12.5887C26.0336 12.4075 26.2584 12.3165 26.5263 12.3159C26.7947 12.3159 27.0198 12.4068 27.2017 12.5887C27.3836 12.7706 27.4743 12.9954 27.4736 13.2632V15.158H29.3684C29.6368 15.158 29.8619 15.2489 30.0438 15.4308C30.2257 15.6127 30.3164 15.8375 30.3157 16.1054C30.3157 16.3737 30.2248 16.5989 30.0429 16.7808C29.861 16.9627 29.6362 17.0534 29.3684 17.0527H27.4736V18.9475C27.4736 19.2158 27.3827 19.441 27.2008 19.6229C27.0189 19.8048 26.7941 19.8955 26.5263 19.8948C26.2579 19.8948 26.033 19.8039 25.8517 19.622C25.6705 19.4401 25.5796 19.2153 25.5789 18.9475V17.0527ZM17.0526 18.0001C16.0105 18.0001 15.1183 17.629 14.3763 16.8869C13.6342 16.1449 13.2631 15.2527 13.2631 14.2106C13.2631 13.1685 13.6342 12.2764 14.3763 11.5343C15.1183 10.7922 16.0105 10.4211 17.0526 10.4211C18.0947 10.4211 18.9868 10.7922 19.7289 11.5343C20.471 12.2764 20.8421 13.1685 20.8421 14.2106C20.8421 15.2527 20.471 16.1449 19.7289 16.8869C18.9868 17.629 18.0947 18.0001 17.0526 18.0001ZM9.47363 23.6843V22.9264C9.47363 22.3895 9.61195 21.8963 9.88858 21.4466C10.1652 20.9969 10.5321 20.6534 10.9894 20.4159C11.9683 19.9264 12.9631 19.5595 13.9736 19.315C14.9842 19.0706 16.0105 18.9481 17.0526 18.9475C18.0947 18.9475 19.121 19.07 20.1315 19.315C21.1421 19.5601 22.1368 19.927 23.1157 20.4159C23.5736 20.6527 23.9409 20.9963 24.2175 21.4466C24.4942 21.8969 24.6322 22.3902 24.6315 22.9264V23.6843C24.6315 24.2054 24.4461 24.6516 24.0754 25.0229C23.7047 25.3943 23.2585 25.5797 22.7368 25.579H11.3684C10.8473 25.579 10.4014 25.3936 10.0307 25.0229C9.65998 24.6522 9.4743 24.206 9.47363 23.6843ZM11.3684 23.6843H22.7368V22.9264C22.7368 22.7528 22.6935 22.5948 22.607 22.4527C22.5205 22.3106 22.4059 22.2001 22.2631 22.1211C21.4105 21.6948 20.55 21.3753 19.6815 21.1624C18.8131 20.9495 17.9368 20.8429 17.0526 20.8422C16.1684 20.8422 15.2921 20.949 14.4236 21.1624C13.5552 21.3758 12.6947 21.6955 11.8421 22.1211C11.6999 22.2001 11.5853 22.3106 11.4982 22.4527C11.411 22.5948 11.3677 22.7528 11.3684 22.9264V23.6843ZM17.0526 16.1054C17.5736 16.1054 18.0198 15.92 18.3912 15.5492C18.7626 15.1785 18.948 14.7323 18.9473 14.2106C18.9473 13.6896 18.7619 13.2436 18.3912 12.8729C18.0205 12.5022 17.5743 12.3165 17.0526 12.3159C16.5315 12.3159 16.0856 12.5016 15.7149 12.8729C15.3442 13.2443 15.1585 13.6902 15.1578 14.2106C15.1578 14.7317 15.3435 15.1779 15.7149 15.5492C16.0863 15.9206 16.5322 16.106 17.0526 16.1054Z"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_280_1259">
+                    <rect width="36" height="36" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                </span> 
+            </div>
+        </div>
+        <div class="chats">
+            <div class="switch">
+                <h4 class="switch-title">Recent messages</h4>
+                <span class="icon-wrapper icon-switch">
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 7L8 10.0769L12 7" stroke="#353E57" stroke-width="1.84615" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="chats-container">
+                <div class="chat">
+                    <div class="chat_avatar">
+                        <span class="img-wrapper img_profile img_profile--square">
+                            <img src="./img/photo/11-1.png">
+                        </span>
+                        <span class="indicator online_indicator online_indicator--offline"></span>
+                    </div>
+                    <div class="ppl_name__msg">
+                        <p class="ppl_name">Gus M.</p>
+                        <p class="msg">Lorem Ipsum is simply dummy text of the priting and typesetting industry....</p>
+                    </div>
+                </div>
+                <div class="chat">
+                    <div class="chat_avatar">
+                        <span class="img-wrapper img_profile img_profile--square">
+                            <img src="./img/photo/7.png">
+                        </span>
+                        <span class="indicator online_indicator online_indicator--online"></span>
+                    </div>
+                    <div class="ppl_name__msg">
+                        <p class="ppl_name">Amelia J.</p>
+                        <p class="msg">Lorem Ipsum is simply dummy text of the priting and typesetting industry....</p>
+                    </div>
+                </div>
+                <div class="chat chat-group chat--active">
+                    <div class="chat_avatar">
+                        <span class="img-wrapper img_profile img_profile--square">
+                            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M25.5016 17.3805L25.5016 11.553C25.5018 10.9371 25.3124 10.3362 24.9593 9.83167C24.6061 9.32717 24.1063 8.94357 23.5276 8.73296L8.01459 3.09296C7.46709 2.89346 6.85359 3.02996 6.44109 3.44096L6.00159 3.88046L15.6346 13.5135C15.6736 13.512 15.7126 13.5015 15.7516 13.5015C16.1966 13.5015 16.6316 13.6334 17.0016 13.8807C17.3716 14.1279 17.66 14.4793 17.8303 14.8904C18.0006 15.3016 18.0452 15.754 17.9584 16.1904C17.8715 16.6269 17.6572 17.0278 17.3426 17.3424C17.0279 17.6571 16.627 17.8714 16.1905 17.9582C15.7541 18.045 15.3017 18.0005 14.8906 17.8302C14.4794 17.6599 14.128 17.3715 13.8808 17.0015C13.6335 16.6315 13.5016 16.1965 13.5016 15.7515C13.5016 15.7125 13.5121 15.6735 13.5136 15.6345L3.88059 6.00146L3.44109 6.44096C3.2389 6.64264 3.09868 6.89799 3.03702 7.17683C2.97535 7.45566 2.99481 7.74633 3.09309 8.01446L8.73459 23.5275C8.9452 24.1061 9.3288 24.606 9.8333 24.9592C10.3378 25.3123 10.9388 25.5016 11.5546 25.5015L17.3821 25.5015L20.3791 28.5L28.5001 20.379L25.5016 17.3805ZM22.4086 29.91L29.9086 22.41L33.0901 25.59L25.5901 33.09L22.4086 29.91Z" fill="white"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="ppl_name__msg">
+                        <p class="ppl_name">Design Talk</p>
+                        <p class="msg">Siergo: Lorem Ipsum is simply dummy text of the printing and  typesetting....</p>
+                    </div>
+                </div>
+                <div class="chat">
+                    <div class="chat_avatar">
+                        <span class="img-wrapper img_profile img_profile--square">
+                            <img src="./img/photo/4.png">
+                        </span>
+                        <span class="indicator online_indicator online_indicator--offline"></span>
+                    </div>
+                    <div class="ppl_name__msg">
+                        <p class="ppl_name">Cristine S.</p>
+                        <p class="msg">Lorem Ipsum is simply dummy text of the priting and typesetting industry....</p>
+                    </div>
+                </div>
+                <div class="chat">
+                    <div class="chat_avatar">
+                        <span class="img-wrapper img_profile img_profile--square">
+                            <img src="./img/photo/4-1.png">
+                        </span>
+                        <span class="indicator online_indicator online_indicator--offline"></span>
+                    </div>
+                    <div class="ppl_name__msg">
+                        <p class="ppl_name">El. South</p>
+                        <p class="msg">Lorem Ipsum is simply dummy text of the priting and typesetting industry....</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chat_view">
+            <div class="chat_view__header">
+                <div class="chat_info">
+                    <div class="chat_name">
+                        <div class="chat-avatar">
+                            <span class="icon-wrapper icon-chat">
+                                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M25.5016 17.3805L25.5016 11.553C25.5018 10.9371 25.3124 10.3362 24.9593 9.83167C24.6061 9.32717 24.1063 8.94357 23.5276 8.73296L8.01459 3.09296C7.46709 2.89346 6.85359 3.02996 6.44109 3.44096L6.00159 3.88046L15.6346 13.5135C15.6736 13.512 15.7126 13.5015 15.7516 13.5015C16.1966 13.5015 16.6316 13.6334 17.0016 13.8807C17.3716 14.1279 17.66 14.4793 17.8303 14.8904C18.0006 15.3016 18.0452 15.754 17.9584 16.1904C17.8715 16.6269 17.6572 17.0278 17.3426 17.3424C17.0279 17.6571 16.627 17.8714 16.1905 17.9582C15.7541 18.045 15.3017 18.0005 14.8906 17.8302C14.4794 17.6599 14.128 17.3715 13.8808 17.0015C13.6335 16.6315 13.5016 16.1965 13.5016 15.7515C13.5016 15.7125 13.5121 15.6735 13.5136 15.6345L3.88059 6.00146L3.44109 6.44096C3.2389 6.64264 3.09868 6.89799 3.03702 7.17683C2.97535 7.45566 2.99481 7.74633 3.09309 8.01446L8.73459 23.5275C8.9452 24.1061 9.3288 24.606 9.8333 24.9592C10.3378 25.3123 10.9388 25.5016 11.5546 25.5015L17.3821 25.5015L20.3791 28.5L28.5001 20.379L25.5016 17.3805ZM22.4086 29.91L29.9086 22.41L33.0901 25.59L25.5901 33.09L22.4086 29.91Z" fill="white"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="chat_name__title__quantity">
+                            <h3 class="chat_name__title">Design Talk</h3>
+                            <p class="chat_name__quantity">12 designers currently chatting</p>
+                        </div>
+                    </div>
+                    <div class="list participants-list images-list">
+                        <span class="img-wrapper img_profile">
+                            <img src="./img/photo/19.png">
+                        </span>
+                        <span class="img-wrapper img_profile">
+                            <img src="./img/photo/9-1.png">
+                        </span>
+                        <span class="img-wrapper img_profile">
+                            <img src="./img/photo/9.png">
+                        </span>
+                        <span class="img-wrapper img_profile">
+                            <img src="./img/photo/8.png">
+                        </span>
+                        <div class="counter others-counter">
+                            +45
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="msg_list">
+                <div class="msg_chat">
+                    <div class="chat_avatar">
+                        <span class="img-wrapper img_profile img_profile--square">
+                            <img src="./img/photo/11-1.png">
+                        </span>
+                        <span class="indicator online_indicator online_indicator--offline"></span>
+                    </div>
+                    <div class="msg_chat__content">
+                        <div class="msg_chat__content__sender">
+                            <h5 class="sender-name">Gus M.</h5>
+                        </div>
+                        <div class="msg_chat__content__text">
+                            <p>Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy  text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book. It has survived not  only five centuries, but also the leap into electronic typesetting,  remaining essentially unchanged. It was popularised in the 1960s with  the release of Letraset sheets containing Lorem Ipsum passages, and more  recently with desktop publishing software like Aldus PageMaker  including versions of Lorem Ipsum.</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and  typesetting industry.</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy  text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book.</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy  text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book. It has survived not  only five centuries, but also the leap into electronic typesetting,  remaining essentially unchanged.</p>
+                        </div>
+                        <div class="list participants-list images-list">
+                            <span class="img-wrapper img_profile">
+                                <img src="./img/photo/19.png">
+                            </span>
+                            <span class="img-wrapper img_profile">
+                                <img src="./img/photo/9-1.png">
+                            </span>
+                            <span class="img-wrapper img_profile">
+                                <img src="./img/photo/9.png">
+                            </span>
+                            <span class="img-wrapper img_profile">
+                                <img src="./img/photo/8.png">
+                            </span>
+                            <div class="counter others-counter">
+                                +9
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg_chat">
+                    <div class="chat_avatar">
+                        <span class="img-wrapper img_profile img_profile--square">
+                            <img src="./img/photo/3.png">
+                        </span>
+                        <span class="indicator online_indicator online_indicator--offline"></span>
+                    </div>
+                    <div class="msg_chat__content">
+                        <div class="msg_chat__content__sender">
+                            <h5 class="sender-name">Galina B.</h5>
+                        </div>
+                        <div class="msg_chat__content__text">
+                            <p>Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy  text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book. It has survived not  only five centuries, but also the leap into electronic typesetting,  remaining essentially unchanged.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg_chat">
+                    <div class="chat_avatar">
+                        <span class="img-wrapper img_profile img_profile--square">
+                            <img src="./img/photo/13-1.png">
+                        </span>
+                        <span class="indicator online_indicator online_indicator--online"></span>
+                    </div>
+                    <div class="msg_chat__content">
+                        <div class="msg_chat__content__sender">
+                            <h5 class="sender-name">John D.</h5>
+                        </div>
+                        <div class="msg_chat__content__text">
+                            <p>Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy  text ever since the 1500s, when an unknown printer took a galley(</p>
+                        </div>
+                        <div class="list participants-list images-list">
+                            <span class="img-wrapper img_profile">
+                                <img src="./img/photo/12.png">
+                            </span>
+                            <span class="img-wrapper img_profile">
+                                <img src="./img/photo/8-1.png">
+                            </span>
+                            <span class="img-wrapper img_profile">
+                                <img src="./img/photo/15.png">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg_chat">
+                    <div class="chat_avatar">
+                        <span class="img-wrapper img_profile img_profile--square">
+                            <img src="./img/photo/15.png">
+                        </span>
+                        <span class="indicator online_indicator online_indicator--online"></span>
+                    </div>
+                    <div class="msg_chat__content">
+                        <div class="msg_chat__content__sender">
+                            <h5 class="sender-name">Keily P.</h5>
+                        </div>
+                        <div class="msg_chat__content__text">
+                            <p>Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy  text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book. It has survived not  only five centuries, but also the leap into electronic typesetting,  remaining essentially unchanged. It was popularised in the 1960s with  the release of Letraset sheets containing Lorem Ipsum passages, and more  recently with desktop publishing software like Aldus PageMaker  including versions of Lorem Ipsum.</p>
+                            </div>
+                        <div class="list participants-list images-list">
+                            <span class="img-wrapper img_profile">
+                                <img src="./img/photo/18.png">
+                            </span>
+                            <span class="img-wrapper img_profile">
+                                <img src="./img/photo/2.png">
+                            </span>
+                            <span class="img-wrapper img_profile">
+                                <img src="./img/photo/3-1.png">
+                            </span>
+                            <span class="img-wrapper img_profile">
+                                <img src="./img/photo/4.png">
+                            </span>
+                            <div class="counter others-counter">
+                                +3
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg_chat">
+                    <div class="chat_avatar">
+                        <span class="img-wrapper img_profile img_profile--square">
+                            <img src="./img/photo/5-1.png">
+                        </span>
+                        <span class="indicator online_indicator online_indicator--offline"></span>
+                    </div>
+                    <div class="msg_chat__content">
+                        <div class="msg_chat__content__sender">
+                            <h5 class="sender-name">Piter N.</h5>
+                        </div>
+                        <div class="msg_chat__content__text">
+                            <p>Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy  text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg_chat">
+                    <div class="chat_avatar">
+                        <span class="img-wrapper img_profile img_profile--square">
+                            <img src="./img/photo/11-1.png">
+                        </span>
+                        <span class="indicator online_indicator online_indicator--offline"></span>
+                    </div>
+                    <div class="msg_chat__content">
+                        <div class="msg_chat__content__sender">
+                            <h5 class="sender-name">Gus M.</h5>
+                        </div>
+                        <div class="msg_chat__content__text">
+                            <p>Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy  text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book. It has survived not  only five centuries, but also the leap into electronic typesetting,  remaining essentially unchanged. It was popularised in the 1960s with  the release of Letraset sheets containing Lorem Ipsum passages, and more  recently with desktop publishing software like Aldus PageMaker  including versions of Lorem Ipsum.</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and  typesetting industry.</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy  text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book.</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy  text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book. It has survived not  only five centuries, but also the leap into electronic typesetting,  remaining essentially unchanged.</p>
+                        </div>
+                        <div class="list participants-list images-list">
+                            <span class="img-wrapper img_profile">
+                                <img src="./img/photo/19.png">
+                            </span>
+                            <span class="img-wrapper img_profile">
+                                <img src="./img/photo/9-1.png">
+                            </span>
+                            <span class="img-wrapper img_profile">
+                                <img src="./img/photo/9.png">
+                            </span>
+                            <span class="img-wrapper img_profile">
+                                <img src="./img/photo/8.png">
+                            </span>
+                            <div class="counter others-counter">
+                                +9
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg_chat">
+                    <div class="chat_avatar">
+                        <span class="img-wrapper img_profile img_profile--square">
+                            <img src="./img/photo/3.png">
+                        </span>
+                        <span class="indicator online_indicator online_indicator--offline"></span>
+                    </div>
+                    <div class="msg_chat__content">
+                        <div class="msg_chat__content__sender">
+                            <h5 class="sender-name">Galina B.</h5>
+                        </div>
+                        <div class="msg_chat__content__text">
+                            <p>Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy  text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book. It has survived not  only five centuries, but also the leap into electronic typesetting,  remaining essentially unchanged.</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy  text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book.</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and  typesetting industry.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg_chat">
+                    <div class="chat_avatar">
+                        <span class="img-wrapper img_profile img_profile--square">
+                            <img src="./img/photo/5-1.png">
+                        </span>
+                        <span class="indicator online_indicator online_indicator--offline"></span>
+                    </div>
+                    <div class="msg_chat__content">
+                        <div class="msg_chat__content__sender">
+                            <h5 class="sender-name">Piter N.</h5>
+                        </div>
+                        <div class="msg_chat__content__text">
+                            <p>Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy  text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="msg_form">
+                <input class="input_msg" type="text" name="msg" placeholder="Type something for design talk group 🌟"/>
+                <div class="msg__form-actions">
+                    <span class="icon-wrapper msg_form__icon">
+                        <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.2544 13.4354L17.0044 19.0646C16.1424 20.5575 14.7227 21.6469 13.0576 22.0931C11.3924 22.5393 9.61818 22.3057 8.12523 21.4437C6.63228 20.5818 5.54289 19.162 5.09671 17.4969C4.65053 15.8317 4.88411 14.0575 5.74606 12.5646L10.0794 5.05901C10.654 4.06371 11.6005 3.33745 12.7106 3.03999C13.8207 2.74254 15.0035 2.89826 15.9988 3.4729C16.9941 4.04753 17.7204 4.99401 18.0179 6.10412C18.3153 7.21424 18.1596 8.39704 17.585 9.39234L13.2516 16.8979C12.9643 17.3955 12.4911 17.7587 11.936 17.9074C11.3809 18.0561 10.7895 17.9783 10.2919 17.6909C9.79425 17.4036 9.43112 16.9304 9.28239 16.3753C9.13366 15.8203 9.21152 15.2289 9.49884 14.7312L13.8322 7.22567" stroke="#434B61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <span class="icon-wrapper msg_form__icon">
+                        <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.95817 2.16663C3.8565 2.16663 2.1665 3.85663 2.1665 5.95829V20.0416C2.1665 22.1433 3.8565 23.8333 5.95817 23.8333H17.3332L23.8332 17.3333V5.95829C23.8332 3.85663 22.1432 2.16663 20.0415 2.16663H5.95817ZM6.229 4.33329H19.7707C20.2735 4.33329 20.7557 4.53303 21.1112 4.88857C21.4668 5.24411 21.6665 5.72632 21.6665 6.22913V16.25H20.0415C17.9398 16.25 16.2498 17.94 16.2498 20.0416V21.6666H6.229C5.7262 21.6666 5.24398 21.4669 4.88845 21.1113C4.53291 20.7558 4.33317 20.2736 4.33317 19.7708V6.22913C4.33317 5.72632 4.53291 5.24411 4.88845 4.88857C5.24398 4.53303 5.7262 4.33329 6.229 4.33329ZM15.6432 7.33413C15.4698 7.33413 15.2965 7.35579 15.134 7.39913C14.1157 7.68079 13.5415 8.72079 13.8015 9.74996C13.8557 9.91246 13.9315 10.075 14.029 10.2266L17.5282 9.27329C17.5282 9.08913 17.5065 8.90496 17.4632 8.72079C17.2357 7.90829 16.4882 7.33413 15.6432 7.33413ZM8.85067 9.20829C8.6665 9.20829 8.504 9.20829 8.3415 9.26246C7.334 9.54413 6.73817 10.5841 7.009 11.5916C7.0415 11.765 7.139 11.9166 7.2365 12.09L10.7357 11.1366C10.7357 10.9525 10.714 10.7683 10.6707 10.595C10.5647 10.1944 10.3282 9.84051 9.99857 9.58938C9.66896 9.33824 9.26503 9.20415 8.85067 9.20829ZM18.1132 12.1983L8.22234 14.9175C8.92474 15.7303 9.84238 16.3283 10.8696 16.6426C11.8969 16.9569 12.992 16.9747 14.029 16.6941C15.0637 16.4047 15.9957 15.8293 16.7181 15.034C17.4406 14.2388 17.9241 13.2559 18.1132 12.1983Z" fill="#434B61"/>
+                        </svg>
+                    </span>
+                    <span class="icon-wrapper msg_form__icon">
+                        <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.0241 3.9758C21.8192 3.77231 21.5621 3.62926 21.2811 3.56237C21.0002 3.49548 20.7062 3.50733 20.4316 3.59663L4.58243 8.8833C4.28849 8.97644 4.02875 9.1546 3.836 9.39527C3.64326 9.63595 3.52616 9.92835 3.4995 10.2355C3.47283 10.5427 3.5378 10.8509 3.6862 11.1212C3.8346 11.3915 4.05977 11.6117 4.33326 11.7541L10.9091 15.0041L14.1591 21.6016C14.2897 21.8599 14.4896 22.0767 14.7364 22.2278C14.9832 22.379 15.2672 22.4585 15.5566 22.4575H15.6649C15.9749 22.4346 16.2708 22.3191 16.5142 22.1259C16.7576 21.9327 16.9373 21.6708 17.0299 21.3741L22.3924 5.5683C22.4882 5.29522 22.5044 5.00057 22.4392 4.71864C22.374 4.4367 22.23 4.17909 22.0241 3.9758ZM5.2541 10.3783L19.0883 5.7633L11.4074 13.4441L5.2541 10.3783ZM15.6324 20.7458L12.5558 14.5925L20.2366 6.91163L15.6324 20.7458Z" fill="#434B61"/>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="transition">
+            <span class="icon-wrapper icon-transition">
+                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 7L8 10.0769L12 7" stroke="#353E57" stroke-width="1.84615" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </span>
+        </div>
+    </main>
+</body>
+</html>
