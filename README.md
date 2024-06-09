@@ -1,1 +1,1 @@
-# Chat-Craft.githb.com
+# Chat-Craft.github.com
